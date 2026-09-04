@@ -13,7 +13,8 @@ public:
         for(int i=0; i<n; i++) trans_count[transpose[i]]++;
 
         for(int i=0; i<n; i++){
-            if(trans_count.count(grid[i])) count += trans_count[grid[i]];
+            auto it = trans_count.find(grid[i]);
+            if(it != trans_count.end()) count += it->second;
         }
         return count;
     }
