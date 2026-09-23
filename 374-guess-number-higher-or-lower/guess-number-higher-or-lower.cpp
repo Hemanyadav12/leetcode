@@ -9,7 +9,7 @@
 
 class Solution {
 public:
-    int ans(int n){
+    int guessNumber(int n) {
         int low = 1;
         int high = n;
         while(low <= high){
@@ -19,8 +19,5 @@ public:
             else if(guess(mid) == 1) low = mid+1;
         }
         return -1;
-    }
-    int guessNumber(int n) {
-        return ans(n);
     }
 };
