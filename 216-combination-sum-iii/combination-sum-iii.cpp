@@ -5,7 +5,7 @@ public:
             ans.push_back(comb);
             return;
         }
-        if(idx > 9) return;
+        if(sum > n || num > k ||idx > 9) return;
         comb.push_back(idx);
         combSum(ans, comb, k, n, sum+idx, num+1, idx+1);
         comb.pop_back();
