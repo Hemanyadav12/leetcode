@@ -24,11 +24,6 @@ public:
     vector<string> removeInvalidParentheses(string s) {
         vector<string> ans;
         int close = 0, open = 0;
-        // for(int i=0; i<s.size(); i++){
-        //     if(s[i] == '(') open++;
-        //     else if (s[i] == ')') close++;
-        // }
-        // int remove = abs(close - open);
         for(char c : s){
             if(c == '(') open++;
             else if(c == ')'){
